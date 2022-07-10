@@ -1,4 +1,4 @@
-const formatDate = (date: Date) => {
+const formatDate = (date: Date):string => {
   const d:Date = new Date(date);
   let month = `${d.getMonth() + 1}`;
   let day = `${d.getDate()}`;
@@ -11,6 +11,19 @@ const formatDate = (date: Date) => {
   if (day.length < 2) {
       day = `0${day}`
   }
-  return [month, day, year].join('-')
+  return [year, month, day].join('-')
 }
-export default formatDate;
+
+const formatCurrency = (value: number = 0): string => {
+  // const c:string = number.toLocaleString(undefined, { maximumFractionDigits: 2 });
+  const v = value ? parseFloat(String(value)) : 0;
+  const c:string = v.toFixed(2);
+  return c;
+}
+
+const formatNumber = (value: number = 0) =>
+  new Intl.NumberFormat('en', {
+    style: 'currency', currency: 'MYR'
+  }).format(value);
+
+export { formatDate, formatCurrency, formatNumber };

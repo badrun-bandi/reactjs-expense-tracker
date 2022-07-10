@@ -1,3 +1,4 @@
+import { StyledEngineProvider } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -10,9 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Provider>
-      <App />
-    </Provider>
+    <StyledEngineProvider injectFirst>
+      <Provider>
+        <App />
+      </Provider>
+    </StyledEngineProvider>
   </React.StrictMode>
 );
 
