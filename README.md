@@ -1,16 +1,18 @@
 # React JS Simple Expense Tracker
 
-Simple Expense Tracker using ReactJS + Redux
+## Description
 
-## Start the project
+Simple Expense Tracker Demo Application to demonstrate ReactJS + ChartJS + React MUIv5 Emotion
+Enhanced with React Context Provider, Typescript and Styled Engine
+
+![Screenshot](screenshot-desktop.png)
+![Screenshot](screenshot-mobile.png)
+
+## Installation
 
 ### `npm install`
 
 ### `npm start`
-
-Launches the test runner in the interactive watch mode:
-
-### `npm test`
 
 Builds the app for production to the `build` folder:
 
